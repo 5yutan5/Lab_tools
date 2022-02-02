@@ -12,10 +12,6 @@ on:
       - ".github/workflows/build-Electromechanical-Tensile-Tester.yml"
       - "!**.md"
 
-defaults:
-  run:
-    shell: bash
-
 env:
   PYTHONIOENCODING: "utf-8" # For log color
 
