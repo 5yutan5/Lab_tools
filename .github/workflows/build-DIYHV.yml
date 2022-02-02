@@ -69,7 +69,7 @@ jobs:
       - name: Install dependencies
         run: |
           poetry install
-          poetry run pip -U install pyqt6
+          poetry run pip install -U pyqt6
 
       - name: Install mac dependencies
         if: runner.os == 'macOS'
