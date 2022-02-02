@@ -31,7 +31,7 @@ jobs:
         with:
           python-version: "3.10"
 
-      - name: Create Mac OS installer
+      - name: Setup Mac OS dependencies
         if: runner.os == 'macOS'
         run: |
           cd Electromechanical-Tensile-Tester
@@ -41,7 +41,7 @@ jobs:
           pip install ./pyAutoLab ./pyautolab-hioki ./pyautolab-optosigma ./pyautolab-loadcell
           pip install PyQt6
 
-      - name: Create Windows installer
+      - name: Setup Windows dependencies
         if: runner.os == 'Windows'
         run: |
           cd Electromechanical-Tensile-Tester
@@ -50,6 +50,9 @@ jobs:
           pip install --upgrade pip
           pip install .\pyAutoLab .\pyautolab-hioki .\pyautolab-optosigma .\pyautolab-loadcell
           pip install PyQt6
+
+      - name: Create installer
+        run: python -m pyautolab.create_installer
 
       - name: Archive app
         uses: actions/upload-artifact@v2
