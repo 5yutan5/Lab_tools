@@ -1,0 +1,109 @@
+{
+    "stop": "v",
+    "static": [
+        {
+            "command": "a",
+            "voltage": 1
+        },
+        {
+            "command": "b",
+            "voltage": 2
+        },
+        {
+            "command": "c",
+            "voltage": 3
+        }
+    ],
+    "dynamic": [
+        {
+            "command": "d",
+            "voltage": 1,
+            "frequency": 0.25
+        },
+        {
+            "command": "e",
+            "voltage": 1,
+            "frequency": 1
+        },
+        {
+            "command": "f",
+            "voltage": 1,
+            "frequency": 5
+        },
+        {
+            "command": "g",
+            "voltage": 2,
+            "frequency": 0.25
+        },
+        {
+            "command": "h",
+            "voltage": 2,
+            "frequency": 1
+        },
+        {
+            "command": "i",
+            "voltage": 2,
+            "frequency": 5
+        },
+        {
+            "command": "j",
+            "voltage": 3,
+            "frequency": 0.25
+        },
+        {
+            "command": "k",
+            "voltage": 3,
+            "frequency": 1
+        },
+        {
+            "command": "l",
+            "voltage": 3,
+            "frequency": 5
+        },
+        {
+            "command": "m",
+            "voltage": 1,
+            "frequency": 25
+        },
+        {
+            "command": "n",
+            "voltage": 1,
+            "frequency": 50
+        },
+        {
+            "command": "o",
+            "voltage": 1,
+            "frequency": 100
+        },
+        {
+            "command": "p",
+            "voltage": 2,
+            "frequency": 25
+        },
+        {
+            "command": "q",
+            "voltage": 2,
+            "frequency": 50
+        },
+        {
+            "command": "r",
+            "voltage": 2,
+            "frequency": 100
+        },
+        {
+            "command": "s",
+            "voltage": 3,
+            "frequency": 25
+        },
+        {
+            "command": "t",
+            "voltage": 3,
+            "frequency": 50
+        },
+        {
+            "command": "u",
+            "voltage": 3,
+            "frequency": 100
+        }
+    ]
+}

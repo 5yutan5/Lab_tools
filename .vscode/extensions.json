@@ -1,0 +1,17 @@
+{
+	"recommendations": [
+		"ms-python.vscode-pylance",
+		"ms-python.python",
+		"intellsmi.comment-translate",
+		"tamasfe.even-better-toml",
+		"oderwat.indent-rainbow",
+		"njpwerner.autodocstring",
+		"visualstudioexptteam.vscodeintellicode",
+		"streetsidesoftware.code-spell-checker",
+		"christian-kohler.path-intellisense",
+		"davidanson.vscode-markdownlint"
+	],
+	"unwantedRecommendations": [
+
+	]
+}
