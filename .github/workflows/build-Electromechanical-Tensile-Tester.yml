@@ -34,6 +34,7 @@ jobs:
       - name: Create Mac OS installer
         if: runner.os == 'macOS'
         run: |
+          brew install create-dmg
           cd Electromechanical-Tensile-Tester
           python -m venv .venv
           source .venv/bin/activate
