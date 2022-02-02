@@ -5,7 +5,7 @@ from serial import Serial
 
 class _ArduinoSerial(Serial):
     def __init__(self) -> None:
-        super().__init__()
+        super().__init__(timeout=10)
         self._delimiter = "\r\n"
 
     def send_message(self, message: str) -> None:
