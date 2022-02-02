@@ -4,11 +4,13 @@ on:
     paths:
       - "DIYHV"
       - "tools/create_installer"
+      - ".github/workflows/build-DIYHV.yml"
     branches: [main]
   pull_request:
     paths:
       - "DIYHV"
       - "tools/create_installer"
+      - ".github/workflows/build-DIYHV.yml"
 
 defaults:
   run:
@@ -75,7 +77,6 @@ jobs:
         run: brew install create-dmg
 
       - name: Create installer
-        shell: bash
         run: poetry run python -m tools.create_installer DIYHV/diy_hv/__main__.py -n DIYHV
 
       - name: Archive app
