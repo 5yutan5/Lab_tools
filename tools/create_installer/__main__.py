@@ -112,9 +112,10 @@ def _create_windows_installer(target_dir_path: Path, installer_name: str, licens
         .replace("$${license_path}", str(license_path))
     )
     _console.log("Creating nsi file...")
-    with NamedTemporaryFile("w", encoding="utf-8", suffix=".nsi", dir=str(PROJECT_ROOT_PATH)) as f:
+    with NamedTemporaryFile("w", encoding="utf-8", suffix=".nsi", dir=str(PROJECT_ROOT_PATH), delete=False) as f:
         f.write(nsi_text)
         subprocess.run(["makensis", str(PROJECT_ROOT_PATH / f.name)])
+    (PROJECT_ROOT_PATH / f.name).unlink()
 
 
 def _main() -> None:
