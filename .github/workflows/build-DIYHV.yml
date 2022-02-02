@@ -70,7 +70,7 @@ jobs:
         if: steps.cache-venv.outputs.cache-hit != 'true'
         run: |
           poetry install
-          pip install pyqt6
+          poetry run pip install pyqt6
 
       - name: Install mac dependencies
         if: runner.os == 'macOS'
