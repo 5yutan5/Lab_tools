@@ -4,7 +4,7 @@ GUI for high voltage controller
 
 ## Installation
 
-You can install a freezing app from Releases.
+You can install a freezing app from [Releases](https://github.com/5yutan5/Lab_tools/releases).
 
 ## Get started
 

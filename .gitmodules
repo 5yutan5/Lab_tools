@@ -1,0 +1,9 @@
+[submodule "pyautolab-hioki"]
+	path = Electromechanical-Tensile-Tester/pyautolab-hioki
+	url = https://github.com/pyautolab/pyautolab-hioki.git
+[submodule "pyAutoLab"]
+	path = Electromechanical-Tensile-Tester/pyAutoLab
+	url = https://github.com/pyautolab/pyAutoLab.git
+[submodule "pyautolab-optosigma"]
+	path = Electromechanical-Tensile-Tester/pyautolab-optosigma
+	url = https://github.com/pyautolab/pyautolab-optosigma.git

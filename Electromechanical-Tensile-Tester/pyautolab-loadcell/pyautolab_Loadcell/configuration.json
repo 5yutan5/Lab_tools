@@ -1,0 +1,18 @@
+{
+    "name": "Loadcell",
+    "device": {
+        "Loadcell": {
+            "class": "pyautolab_Loadcell.driver:Loadcell",
+            "tabClass": "pyautolab_Loadcell.tab:TabLoadcell",
+            "baudrate": {
+                "default": 9600,
+                "enum": [
+                    9600,
+                    19200,
+                    38400,
+                    57600
+                ]
+            }
+        }
+    }
+}

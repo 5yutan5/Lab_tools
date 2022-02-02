@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "pyautolab-Loadcell"
+version = "0.1.0"
+description = "A plugin for pyAutoLab to control Loadcell"
+authors = ["5yutan5 <63651161+5yutan5@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/5yutan5/Lab_tools/Electromechanical-Tensile-Tester/pyautolab-loadcell"
+packages = [{ include = "pyautolab_Loadcell" }]
+
+keywords = ["pyautolab", "qt"]
+
+classifiers = [
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.7,<3.11"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
