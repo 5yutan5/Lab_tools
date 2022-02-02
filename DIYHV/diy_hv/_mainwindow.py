@@ -62,6 +62,8 @@ class MainWindowUI:
         self.push_btn_static.setChecked(True)
         self.push_btn_send.setDefault(True)
         self.push_btn_send.setContentsMargins(12, 0, 12, 12)
+        for btn in (self.push_btn_static, self.push_btn_dynamic, self.push_btn_stop):
+            btn.setAutoDefault(False)
 
         menu_connection = menubar.addMenu("&Connection")
         menu_connection.addActions((self.action_connect, self.action_disconnect))
