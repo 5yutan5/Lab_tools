@@ -103,11 +103,9 @@ def _create_dmg(target_dir_path: Path, dmg_file_name: str, license_path: Path) -
 
 def _create_windows_installer(target_dir_path: Path, installer_name: str, license_path: Path) -> None:
     template_nsi_path = Path(__file__).parent / "template.nsi"
-    exe_name = installer_name.replace(".", "_")
     nsi_text = template_nsi_path.read_text()
     nsi_text = (
         nsi_text.replace("$${app_name}", target_dir_path.name)
-        .replace("$${exe_name}", exe_name)
         .replace("$${installer_path}", f"{Path(DEFAULT_DISTPATH) / installer_name}.exe")
         .replace("$${license_path}", str(license_path))
     )
