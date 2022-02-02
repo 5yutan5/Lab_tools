@@ -1,5 +1,6 @@
 !define APP_NAME "$${app_name}"
 !define INSTALLER_PATH "$${installer_path}"
+!define EXE_NAME "$${exe_name}"
 !define LICENSE_PATH "$${license_path}"
 
 SetCompressor lzma
@@ -28,7 +29,7 @@ OutFile "${INSTALLER_PATH}"
 ShowInstDetails show
 
 
-Section 01
+Section
   SetOutPath "$INSTDIR"
   File /r ".\dist\${APP_NAME}"
 
@@ -37,9 +38,9 @@ Section 01
   CreateDirectory "$SMPROGRAMS\${APP_NAME}"
   SetOutPath "$INSTDIR"
   CreateShortCut "$SMPROGRAMS\${APP_NAME}\Uninstall.lnk" "$INSTDIR\Uninstall.exe"
-  CreateShortcut "$SMPROGRAMS\${APP_NAME}\${APP_NAME}.lnk" "$INSTDIR\${APP_NAME}\${APP_NAME}.exe" ""
+  CreateShortcut "$SMPROGRAMS\${APP_NAME}\${APP_NAME}.lnk" "$INSTDIR\${APP_NAME}\${EXE_NAME}.exe" ""
 
-  CreateShortcut "$DESKTOP\${APP_NAME}.lnk" "$INSTDIR\${APP_NAME}\${APP_NAME}.exe" ""
+  CreateShortcut "$DESKTOP\${APP_NAME}.lnk" "$INSTDIR\${APP_NAME}\${EXE_NAME}.exe" ""
 
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${APP_NAME}" "DisplayName" "${APP_NAME}"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${APP_NAME}" "UninstallString" '"$INSTDIR\Uninstall.exe"'
@@ -47,7 +48,7 @@ SectionEnd
 
 Section "Uninstall"
   Delete "$INSTDIR\Uninstall.exe"
-  Delete "$INSTDIR\${APP_NAME}\${APP_NAME}.exe"
+  Delete "$INSTDIR\${APP_NAME}\${EXE_NAME}.exe"
   RMDir /r "$INSTDIR"
   Delete "$SMPROGRAMS\${APP_NAME}\${APP_NAME}.lnk"
   Delete "$DESKTOP\${APP_NAME}.lnk"
