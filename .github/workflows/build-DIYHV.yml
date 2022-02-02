@@ -67,7 +67,6 @@ jobs:
           POETRY_HOME: ${{ steps.poetry-home.outputs.path }}
 
       - name: Install dependencies
-        if: steps.cache-venv.outputs.cache-hit != 'true'
         run: |
           poetry install
           poetry run pip install pyqt6
