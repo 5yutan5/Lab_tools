@@ -1,10 +1,14 @@
 name: build-DIYHV
 on:
   push:
-    paths: ["DIYHV"]
+    paths:
+      - "DIYHV"
+      - "tools/create_installer"
     branches: [main]
   pull_request:
-    paths: ["DIYHV"]
+    paths:
+      - "DIYHV"
+      - "tools/create_installer"
 
 defaults:
   run:
