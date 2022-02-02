@@ -6,7 +6,6 @@ import shutil
 import subprocess  # nosec
 import tarfile
 from pathlib import Path
-from tempfile import NamedTemporaryFile
 
 import PyInstaller.__main__ as pyinstaller  # noqa: N813
 from PyInstaller import DEFAULT_DISTPATH
@@ -114,10 +113,11 @@ def _create_windows_installer(target_dir_path: Path, installer_name: str, licens
     _console.print(nsi_text)
     _console.print("--------------------------")
     _console.log("Creating nsi file...")
-    with NamedTemporaryFile("w", suffix=".nsi", dir=str(PROJECT_ROOT_PATH), delete=False) as f:
-        f.write(nsi_text)
-        subprocess.run(["makensis", f.name])
-        (PROJECT_ROOT_PATH / f.name).unlink()
+
+    temp_nis_path = PROJECT_ROOT_PATH / "install.nsi"
+    temp_nis_path.write_text(nsi_text)
+    subprocess.run(["makensis", "install.nsi"])
+    temp_nis_path.unlink()
 
 
 def _main() -> None:
