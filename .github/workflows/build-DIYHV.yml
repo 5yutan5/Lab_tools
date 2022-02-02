@@ -5,12 +5,14 @@ on:
       - "DIYHV/**"
       - "tools/create_installer/**"
       - ".github/workflows/build-DIYHV.yml"
+      - "!**.md"
     branches: [main]
   pull_request:
     paths:
       - "DIYHV/**"
       - "tools/create_installer/**"
       - ".github/workflows/build-DIYHV.yml"
+      - "!**.md"
 
 defaults:
   run:

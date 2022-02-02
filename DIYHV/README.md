@@ -28,7 +28,7 @@ python -m diy_hv
 1. Open file dialog with the **Setting** > **Register user file**.
 1. Select Setting file to register additional command(The default commands will be reset).
 
-Example of a command settings file
+Example of a command settings file. You need to use json.
 
 ```json
 {

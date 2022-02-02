@@ -7,5 +7,5 @@ This package creates application installer for Windows and Mac OS.
 Run following command.
 
 ```terminal
-python -m tools.create_installer <main script path> -n <app name>
+python -m tools.create_installer <main script path> -n <app name> -v <version>
 ```
