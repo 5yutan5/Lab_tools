@@ -2,14 +2,14 @@ name: build-DIYHV
 on:
   push:
     paths:
-      - "DIYHV"
-      - "tools/create_installer"
+      - "DIYHV/**"
+      - "tools/create_installer/**"
       - ".github/workflows/build-DIYHV.yml"
     branches: [main]
   pull_request:
     paths:
-      - "DIYHV"
-      - "tools/create_installer"
+      - "DIYHV/**"
+      - "tools/create_installer/**"
       - ".github/workflows/build-DIYHV.yml"
 
 defaults:
