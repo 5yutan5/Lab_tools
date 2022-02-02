@@ -27,7 +27,7 @@ Run following commands in your terminal. Or you can install freezing package in 
     ```Terminal
     cd Electromechanical-Tensile-Tester
     python -m venv .venv
-    .venv\Scripts\activate
+    .venv\Scripts\activate.bat
     pip install --upgrade pip
     pip install .\pyAutoLab .\pyautolab-hioki .\pyautolab-optosigma .\pyautolab-loadcell
     pip install PyQt6
