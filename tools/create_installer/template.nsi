@@ -28,7 +28,7 @@ OutFile "${INSTALLER_PATH}"
 ShowInstDetails show
 
 
-Section
+Section 01
   SetOutPath "$INSTDIR"
   File /r ".\dist\${APP_NAME}"
 
