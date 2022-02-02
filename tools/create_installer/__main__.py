@@ -40,7 +40,10 @@ def _parse_args() -> argparse.Namespace:
 
 
 def _create_app(main_script_path: Path, dist_path: Path, title: str) -> Path:
-    pyinstaller.run(["--clean", "-y", "--windowed", str(main_script_path), "-n", title])
+    commands = ["--clean", "-y", str(main_script_path), "-n", title]
+    if platform.system() == "Darwin":
+        commands.append("--windowed")
+    pyinstaller.run(commands)
     dir_app_path = dist_path / (f"{title}.app" if platform.system() == "Darwin" else title)
     if not dir_app_path.exists():
         raise FileNotFoundError(f"Cannot find {title} executable") from None
@@ -123,7 +126,7 @@ def _main() -> None:
     _console.log("Creating application...")
     app_path = _create_app(main_script_path, Path(DEFAULT_DISTPATH), title)
     license_file_path = PROJECT_ROOT_PATH / "tools" / "create_installer" / "LICENSE.txt"
-    output_file_name = title if version is None else f"{title}-{version}"
+    output_file_name = f"{title}-none" if version is None else f"{title}-{version}"
 
     _console.log("Archiving the application folder...")
     if platform.system() == "Darwin":
