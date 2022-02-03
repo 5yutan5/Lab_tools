@@ -84,15 +84,17 @@ repos:
         pass_filenames: false
         types: [python]
         additional_dependencies:
-          [
-            "pyright",
-            "PyQt6",
-            "rich",
-            "pytest",
-            "qtpy",
-            "pyserial",
-            "pyqtdarktheme",
-            "darkdetect",
-            "qtawesome",
-            "pyinstaller"
-          ]
+          - pyright
+          - PyQt6
+          - rich
+          - pytest
+          - qtpy
+          - pyserial
+          - pyqtdarktheme
+          - darkdetect
+          - qtawesome
+          - pyinstaller
+          - git+https://github.com/5yutan5/pyAutoLab
+          - PyQtGraph
+          - numpy
+          - psutil
