@@ -55,12 +55,12 @@ jobs:
       #     path: ${{ steps.poetry-home.outputs.path }}
       #     key: poetry-${{ runner.os }}-${{ steps.full-py-version.outputs.version }}
 
-      - name: Cache ./.venv
-        id: cache-venv
-        uses: actions/cache@v2
-        with:
-          path: .venv
-          key: poetry-${{ runner.os }}-${{ steps.full-py-version.outputs.version }}
+      # - name: Cache ./.venv
+      #   id: cache-venv
+      #   uses: actions/cache@v2
+      #   with:
+      #     path: .venv
+      #     key: poetry-${{ runner.os }}-${{ steps.full-py-version.outputs.version }}
 
       - uses: snok/install-poetry@v1
         with:
