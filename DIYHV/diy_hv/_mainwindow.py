@@ -16,6 +16,7 @@ from qtpy.QtWidgets import (
     QFormLayout,
     QFrame,
     QHBoxLayout,
+    QLabel,
     QMenuBar,
     QMessageBox,
     QPushButton,
@@ -25,6 +26,16 @@ from qtpy.QtWidgets import (
     QWidget,
 )
 from serial import SerialException
+
+
+def _add_unit(widget: QWidget, text: str) -> QWidget:
+    h_layout = QHBoxLayout()
+    h_layout.addWidget(widget)
+    h_layout.addWidget(QLabel(text))
+    widget_with_label = QWidget()
+    widget_with_label.setLayout(h_layout)
+    h_layout.setContentsMargins(0, 0, 0, 0)
+    return widget_with_label
 
 
 class MainWindowUI:
@@ -73,11 +84,11 @@ class MainWindowUI:
         # Layout
         static_page = QWidget()
         static_layout = QFormLayout(static_page)
-        static_layout.addRow("Voltage", self.combo_static_voltage)
+        static_layout.addRow("Voltage", _add_unit(self.combo_static_voltage, "kV"))
         dynamic_page = QWidget()
         dynamic_layout = QFormLayout(dynamic_page)
-        dynamic_layout.addRow("Voltage", self.combo_dynamic_voltage)
-        dynamic_layout.addRow("Frequency", self.combo_dynamic_frequency)
+        dynamic_layout.addRow("Voltage", _add_unit(self.combo_dynamic_voltage, "kV"))
+        dynamic_layout.addRow("Frequency", _add_unit(self.combo_dynamic_frequency, "Hz"))
         self.stack_widget.addWidget(static_page)
         self.stack_widget.addWidget(dynamic_page)
 
@@ -100,6 +111,10 @@ class MainWindowUI:
         main_layout.addLayout(default_btn_layout)
 
         main_layout.setMenuBar(menubar)
+        self.combo_static_voltage.setMinimumWidth(80)
+        self.combo_dynamic_voltage.setMinimumWidth(80)
+        self.combo_dynamic_frequency.setMinimumWidth(80)
+        main_win.setMinimumSize(480, 480)
 
 
 class DeviceDialog(QDialog):
@@ -232,16 +247,19 @@ class MainWindow(QDialog):
 
         # Static
         self._ui.combo_static_voltage.clear()
-        static_voltages = {str(command["voltage"]) for command in static_commands}
-        self._ui.combo_static_voltage.addItems(sorted(static_voltages))
+        static_voltages = sorted({command["voltage"] for command in static_commands})
+        static_voltages.sort()
+        self._ui.combo_static_voltage.addItems([str(voltage) for voltage in static_voltages])
 
         # Dynamic
         self._ui.combo_dynamic_voltage.clear()
         self._ui.combo_dynamic_frequency.clear()
-        dynamic_voltages = {str(command["voltage"]) for command in dynamic_commands}
-        dynamic_frequency = {str(command["frequency"]) for command in dynamic_commands}
-        self._ui.combo_dynamic_voltage.addItems(sorted(dynamic_voltages))
-        self._ui.combo_dynamic_frequency.addItems(sorted(dynamic_frequency))
+        dynamic_voltages = sorted({command["voltage"] for command in dynamic_commands})
+        dynamic_frequency = sorted({command["frequency"] for command in dynamic_commands})
+        dynamic_voltages.sort()
+        dynamic_frequency.sort()
+        self._ui.combo_dynamic_voltage.addItems([str(voltage) for voltage in dynamic_voltages])
+        self._ui.combo_dynamic_frequency.addItems([str(frequency) for frequency in dynamic_frequency])
 
         self._ui.push_btn_stop.disconnect()
         self._ui.push_btn_stop.pressed.connect(lambda: self._device.send(stop_command))
