@@ -587,7 +587,7 @@ toml = "*"
 
 [[package]]
 name = "pyqtdarktheme"
-version = "1.0.3"
+version = "1.1.0"
 description = "Flat dark theme for PySide and PyQt."
 category = "main"
 optional = false
@@ -875,7 +875,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.7,<3.11"
-content-hash = "9199013c5a92efe70f2ea1d8b8352bcef7cd611b5ef1e335f3a223a86ba8f409"
+content-hash = "4f7acf0d0c8646c193073c48629e2b9b27ff786998fc89797d73c9cb0a018897"
 
 [metadata.files]
 altgraph = [
@@ -1157,8 +1157,8 @@ pyproject-flake8 = [
     {file = "pyproject_flake8-0.0.1a2-py2.py3-none-any.whl", hash = "sha256:e61ed1dc088e9f9f8a7170967ac4ec135acfef3a59ab9738c7b58cc11f294a7e"},
 ]
 pyqtdarktheme = [
-    {file = "PyQtDarkTheme-1.0.3-py3-none-any.whl", hash = "sha256:96a351ea2a10e39c9ed3c44dffac8ef8bc5c721e3cf67195bead6c8c3dfac06f"},
-    {file = "PyQtDarkTheme-1.0.3.tar.gz", hash = "sha256:80257cee4ccaf1ac793c541c09d7d166378881adf42a74529120d1e28e6eb0b5"},
+    {file = "PyQtDarkTheme-1.1.0-py3-none-any.whl", hash = "sha256:06825c71a9cd60581b753cffcf5414342185af22f66020fd60f4f60dafa7657e"},
+    {file = "PyQtDarkTheme-1.1.0.tar.gz", hash = "sha256:1987e5231ed5d773f7eaa906ea27f9de387a0ce2d2effe8ee569e2ecab452c68"},
 ]
 pyserial = [
     {file = "pyserial-3.5-py2.py3-none-any.whl", hash = "sha256:c4451db6ba391ca6ca299fb3ec7bae67a5c55dde170964c7a14ceefec02f2cf0"},
