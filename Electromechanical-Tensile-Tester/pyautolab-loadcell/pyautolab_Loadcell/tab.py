@@ -10,7 +10,7 @@ class TabLoadcell(api.DeviceTab):
 
     def __init__(self, device: Loadcell) -> None:
         """Initialize class."""
-        super().__init__()
+        super().__init__(device)
         self._ui = _TabUI()
         self._ui.setup_ui(self)
         self._ui._set_zero_button.clicked.connect(device.fix_zero)
