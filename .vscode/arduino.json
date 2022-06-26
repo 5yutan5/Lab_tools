@@ -2,5 +2,5 @@
     "board": "arduino:avr:micro",
     "programmer": "arduino:avrisp",
     "port": "/dev/cu.usbmodem11401",
-    "sketch": "DIYHV/voltage_controller/voltage_controller.ino"
+    "sketch": "Electromechanical-Tensile-Tester/pyautolab-loadcell/test.ino"
 }
