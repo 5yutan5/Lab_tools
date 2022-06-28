@@ -114,7 +114,7 @@ toml = ["tomli"]
 
 [[package]]
 name = "darkdetect"
-version = "0.5.1"
+version = "0.6.0"
 description = "Detect OS Dark Mode from Python"
 category = "main"
 optional = false
@@ -861,7 +861,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.7,<3.11"
-content-hash = "ef5dcc1622d867c0f5374651fbfc9e188d90b7a812fb8ad72d958374f2307a70"
+content-hash = "9d56cffafa44ffe37574ad710ab84b5555ac48db761bfb2756508f4bfc99e82f"
 
 [metadata.files]
 altgraph = [
@@ -965,8 +965,8 @@ coverage = [
     {file = "coverage-6.4.1.tar.gz", hash = "sha256:4321f075095a096e70aff1d002030ee612b65a205a0a0f5b815280d5dc58100c"},
 ]
 darkdetect = [
-    {file = "darkdetect-0.5.1-py3-none-any.whl", hash = "sha256:bd96c0239875e2b81c6e542a35299aab2b20c7290f97f7b01a206071908a12b3"},
-    {file = "darkdetect-0.5.1.tar.gz", hash = "sha256:cabe9837529fa305dba740561306a16def52351fa852e5955934fe2447be1785"},
+    {file = "darkdetect-0.6.0-py3-none-any.whl", hash = "sha256:9984327f5f0deeb4f02de01a18976825bc079befe7496b60c8d1fb0a06904d8e"},
+    {file = "darkdetect-0.6.0.tar.gz", hash = "sha256:7993275b537b4579ba2eee7673b0b95783f99c7ddb82a9f90dc077a379b427f1"},
 ]
 distlib = [
     {file = "distlib-0.3.4-py2.py3-none-any.whl", hash = "sha256:6564fe0a8f51e734df6333d08b8b94d4ea8ee6b99b5ed50613f731fd4089f34b"},

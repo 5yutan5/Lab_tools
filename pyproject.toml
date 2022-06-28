@@ -27,7 +27,7 @@ classifiers = [
 python = ">=3.7,<3.11"
 pyqtdarktheme = "^1.1.0"
 QtPy = "^2.1.0"
-darkdetect = "^0.5.1"
+darkdetect = "^0.6.0"
 QtAwesome = "^1.1.1"
 pyserial = "^3.5"
 rich = "^12.4.4"
