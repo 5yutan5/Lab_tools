@@ -656,11 +656,11 @@ pytest = ">=4.0.0"
 
 [[package]]
 name = "pytest-qt"
-version = "4.0.2"
+version = "4.1.0"
 description = "pytest support for PyQt and PySide applications"
 category = "dev"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.7"
 
 [package.dependencies]
 pytest = ">=3.0.0"
@@ -873,7 +873,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.7,<3.11"
-content-hash = "8064f93c1a74d059b8c0f1ed8fa62dbe03afe4909324e1b9a0f8678f94b17b58"
+content-hash = "89b040784f390337497a63a8f6bff989902c1b601869c12a3aaf00aa3ea06db7"
 
 [metadata.files]
 altgraph = [
@@ -1175,8 +1175,8 @@ pytest-github-actions-annotate-failures = [
     {file = "pytest_github_actions_annotate_failures-0.1.6-py2.py3-none-any.whl", hash = "sha256:5222dfa315c49d705912826335488ac1c75946c4b06782ab9a99379a7ee3af66"},
 ]
 pytest-qt = [
-    {file = "pytest-qt-4.0.2.tar.gz", hash = "sha256:dfc5240dec7eb43b76bcb5f9a87eecae6ef83592af49f3af5f1d5d093acaa93e"},
-    {file = "pytest_qt-4.0.2-py2.py3-none-any.whl", hash = "sha256:e03847ac02a890ccaac0fde1748855b9dce425aceba62005c6cfced6cf7d5456"},
+    {file = "pytest-qt-4.1.0.tar.gz", hash = "sha256:027f3d3f5dd04af0530d846cf50fb858f719f7e87c2e4a1c686abd4e0f72172a"},
+    {file = "pytest_qt-4.1.0-py2.py3-none-any.whl", hash = "sha256:edd08dae3b207405edddfc482d4dda4b848e85a8e6a0e7c36f20bac11ab328de"},
 ]
 pytest-randomly = [
     {file = "pytest-randomly-3.11.0.tar.gz", hash = "sha256:9f013b8c1923130f3d0a286fde56e1fc52cfb3547b8eedf2765c460cee979c7f"},
