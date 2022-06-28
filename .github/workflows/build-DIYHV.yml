@@ -81,7 +81,7 @@ jobs:
         run: poetry run python -m tools.create_installer DIYHV/diy_hv/__main__.py -n DIYHV
 
       - name: Archive app
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ runner.os }}-executable
           path: dist/*

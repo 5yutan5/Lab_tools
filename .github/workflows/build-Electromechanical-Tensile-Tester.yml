@@ -55,7 +55,7 @@ jobs:
           python -m pyautolab.create_installer
 
       - name: Archive app
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ runner.os }}-executable
           path: Electromechanical-Tensile-Tester/dist/*
