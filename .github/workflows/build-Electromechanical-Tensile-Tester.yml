@@ -40,7 +40,7 @@ jobs:
           source .venv/bin/activate
           pip install --upgrade pip
           pip install ./pyAutoLab ./pyautolab-hioki ./pyautolab-optosigma ./pyautolab-loadcell
-          pip install PyQt6
+          pip install PySide6
           python -m pyautolab.create_installer
 
       - name: Create Windows installer
@@ -51,7 +51,7 @@ jobs:
           .venv\Scripts\activate.bat
           pip install --upgrade pip
           pip install .\pyAutoLab .\pyautolab-hioki .\pyautolab-optosigma .\pyautolab-loadcell
-          pip install PyQt6
+          pip install PySide6
           python -m pyautolab.create_installer
 
       - name: Archive app
